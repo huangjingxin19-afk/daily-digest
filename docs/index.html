@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日汇总</title>
+<style>
+:root{color-scheme:light dark}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;background:#f6f7f9;color:#1c1e21}
+@media (prefers-color-scheme:dark){body{background:#14161a;color:#e8eaed}}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+header.site{padding:20px 0 8px}
+header.site h1{font-size:24px;margin:0}
+header.site .sub{opacity:.65;font-size:13px;margin-top:4px}
+nav.top{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid rgba(128,128,128,.3);margin-bottom:16px}
+nav.top a{color:inherit;text-decoration:none;font-weight:600}
+section.card{background:rgba(255,255,255,.7);border:1px solid rgba(128,128,128,.25);border-radius:12px;padding:16px 18px;margin:16px 0}
+@media (prefers-color-scheme:dark){section.card{background:rgba(255,255,255,.05)}}
+section.card h2{margin-top:0;font-size:20px}
+article h1{font-size:20px}article h2{font-size:18px}article h3{font-size:16px;margin:18px 0 6px}
+article p{margin:8px 0}
+article ul,article ol{padding-left:22px;margin:8px 0}
+article li{margin:5px 0}
+a{color:#2563eb;word-break:break-all}
+@media (prefers-color-scheme:dark){a{color:#7aa7ff}}
+ul.archive{list-style:none;padding:0}
+ul.archive li{padding:10px 0;border-bottom:1px solid rgba(128,128,128,.2)}
+footer{opacity:.55;font-size:12px;padding:24px 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>每日汇总</h1><div class="sub">AI 热点 · 免费福利，每天早上更新</div></header>
+<nav class="top"><a href="index.html">今日</a><a href="archive.html">归档</a></nav>
+<h2>2026-11-21</h2>
+<section class="card"><h2>AI 热点</h2><article><h3>AI 热点 · 11月21日</h3>
+<h3>新模型</h3>
+<h3>1. 腾讯 Hy4 正式权重开源，11月20日</h3>
+<p>770B 参数 MoE 模型（每 token 激活 49B），支持视觉与电脑操作，上下文 100 万 token；同时放出 FP8 版和预训练 base 版，附系统卡与安全评估。需要注意：正式版改用自定义 Tencent Hy License，不再是预览版的 Apache 2.0，大规模商用需另行授权。 <a href="https://huggingface.co/tencent/Hy4" rel="noopener">Hugging Face</a></p>
+<h3>2. Thinking Machines 发布 Inkling 2 Mini，11月20日</h3>
+<p>26.4B 参数的循环 MoE 模型，中间 12 层每 token 重复跑 3 次，每 token 仅激活 3.4B 参数；Apache 2.0 协议，权重约 20GB，可在笔记本本地运行，支持 100 万 token 上下文与图文输入。官方称其在 DeepSWE 等编码评测上领先同级开源模型。 <a href="https://huggingface.co/blog/inkling2mini" rel="noopener">来源</a></p>
+<h3>新应用与新功能</h3>
+<h3>3. Perplexity 推出 Orchestrator API，11月20日</h3>
+<p>一个端点接入 OpenAI、Anthropic、Google、xAI 及开源模型，统一计费；同一模型出故障时自动切换到另一家部署商继续服务，不额外收平台费；另有预览功能 Routes，可用自然语言描述任务自动选模型。 <a href="https://docs.perplexity.ai/docs/getting-started/overview" rel="noopener">Perplexity 文档</a></p>
+<h3>论文与开源工具</h3>
+<h3>4. Anthropic 数学家称与 Claude 证明了黎曼猜想，11月20日，待确认</h3>
+<p>Levent Alpoge 发布四页说明，称已与 Claude 完成黎曼猜想及广义黎曼猜想的证明，并公开了 Lean 形式化版本；MIT 的 Andrew Sutherland 等已独立编译通过，但对照验证（comparator run）尚未完成，结论仍待学界确认。同一天，斯坦福的 Ravi Vakil 也公布了一份纯人工的广义黎曼猜想证明草稿。 <a href="https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/" rel="noopener">来源</a></p>
+<h3>5. arXiv 论文：参数记忆也会遗忘，11月20日</h3>
+<p>《Some Memories Must Fade》研究了大模型把用户记忆内化进参数后的持久与衰减规律。对做个性化记忆、长期助手的研究和产品有参考价值。 <a href="https://arxiv.org/abs/2611.25235" rel="noopener">arXiv</a></p>
+<p>以上均来自所列出处，营销通稿和纠纷类信息已过滤。</p></article></section>
+<section class="card"><h2>每日免费福利</h2><article><h3>每日免费福利 · 11月21日</h3>
+<h3>今日新增（AI 额度）</h3>
+<h3>1. packet.ai Token Factory — 全站模型免费至 12 月 16 日</h3>
+<ul><li>平台：packet.ai，网站 API（OpenAI 兼容，base_url：api.packet.ai/v1）</li><li>模型：DeepSeek-V4.1-Flash-NVFP4（131K 上下文）、MiniMax-M3.1-Flash（131K）、Qwen2.5-1.5B-Instruct（33K）；Kimi K3 即将上线</li><li>福利：全站模型输入 + 输出 $0，免费至 <strong>2026-12-16</strong>；之后按 $0.23 / $0.85、$0.15 / $0.60、$0.10 / $0.10 每百万 token（输入 / 输出）计费</li><li>限制：无需信用卡，需邮箱 + 手机短信验证一次</li><li>质量提示：DeepSeek V4.1 Flash 和 MiniMax M3.1 Flash 都是当前主流强模型，智能体 / 编程都强；Qwen2.5-1.5B 是轻量小模型，只适合轻任务</li><li>来源：<a href="https://packet.ai/token-factory-free" rel="noopener">packet.ai</a>，核查 2026-11-21</li></ul>
+<h3>2. Articul8 Bivia — 前 1 万名早期用户 10 亿 tokens 免费（补报）</h3>
+<ul><li>平台：Articul8 Bivia，网站 API</li><li>福利：前 10,000 名早期用户 10 亿 tokens 免费，无订阅；$0.042 / 百万输入 tokens，输出 $0</li><li>到期：2026-10-28 上线，官方未注明结束；剩余名额未公布，注册不保证能拿到</li><li>限制：个人需 18+；注意这是决策模型（分类 / 路由 / 抽取），不是通用聊天 / 生成模型，通用问答不适用</li><li>来源：<a href="https://articul8.ai/bivia" rel="noopener">articul8.ai</a>，核查 2026-11-21</li></ul>
+<h3>3. HeyGen Voice Turbo Free — TTS 免费至 11 月 30 日（补报）</h3>
+<ul><li>平台：HeyGen，网站 API</li><li>模型：heygen-voice-1-turbo-free</li><li>福利：$0 / 百万字符，免费至 <strong>2026-11-30</strong>；无需信用卡、无需余额，只需 API key；Artificial Analysis TTS Controlled Voice 榜第 1</li><li>限制：共享容量、无可用性保证、繁忙返回 429；仅公开音色与即时克隆，不支持专业克隆</li><li>来源：<a href="https://www.heygen.com/blog/heygen-voice-turbo" rel="noopener">HeyGen 博客</a>，核查 2026-11-21</li></ul>
+<h3>4. Nebius AI Builder Program — 共 $250 合作方额度（补报）</h3>
+<ul><li>平台：Nebius，网站</li><li>福利：免费加入，会员得 $25 Token Factory 额度 + $25 Tavily + $100 LangSmith + $100 Toloka（官方 FAQ 另一处写 $50 Toloka + $50 Tandem，总额 $250 不变，分配口径不一致）；额度自发放起 90 天过期</li><li>限制：注册需填姓名 / 邮箱 / 公司或学校 / 角色 / 国家 / 在建项目描述 + 邮箱验证，表单还要求 GitHub 主页链接；需写项目描述并可能经筛选，非一键即得</li><li>来源：<a href="https://dev.nebius.com/builders" rel="noopener">dev.nebius.com</a>，核查 2026-11-21</li></ul>
+<h3>限时免费抢</h3>
+<ul><li><strong>Epic Games Store《Mark of the Deep》</strong>：免费领至 <strong>2026-11-26 16:00 UTC（北京时间 11-27 00:00）</strong>，原价 $19.99，领后永久保留。来源：Epic 官方促销数据，多方交叉确认</li></ul>
+<h3>快到期提醒</h3>
+<ul><li><strong>AutoClaw 每周 100M Tokens（M11W3）</strong>：<strong>11 月 22 日 23:59 截止，还剩 1 天</strong>，登录即领，过期作废。来源：<a href="https://autoclaw.z.ai/cn/blog/news/M11W3/" rel="noopener">AutoClaw</a></li><li><strong>StepFun StepAudio 3 免费体验</strong>：<strong>11 月 23 日 11:59:59 截止，还剩 2 天</strong>，之后按新价格收费。来源：StepFun 开放平台定价文档</li><li><strong>IteraCompute 免费 Qwen3.8-27B（30M tokens / 月）</strong>：免费推广 <strong>11 月 24 日 16:00（北京时间）结束，还剩 3 天</strong>。注意：新运营商、公司未披露，共享容量无 SLA，别跑敏感数据</li></ul>
+<h3>学生 / 开发者福利（首次基线核实，之后只报变化）</h3>
+<ul><li><strong>GitHub Student Developer Pack</strong>：验证后得 GitHub Pro、Copilot Student（补全无限 + AI 额度）、Codespaces 每月 180 核时、Actions 3000 分钟 / 月、80+ 合作方权益；学校邮箱 + 在读证明，验证有效期 2 年。来源：<a href="https://education.github.com/pack" rel="noopener">education.github.com/pack</a></li><li><strong>JetBrains 学生授权</strong>：全部 IDE 免费 1 年、在读可续；AI Free 层 + 30 天 AI Pro 试用（AI Pro 不在学生包内）；大学邮箱 / ISIC 卡 / GitHub 学生包均可验证</li><li><strong>微软 Azure for Students</strong>：$100 额度、12 个月内用，无需信用卡，在读每年可续领；18+、学校邮箱验证，中国高校是否在认可名单需自行验证</li><li><strong>AWS Student Rewards</strong>：SheerID 验证学生身份 + 完善 Builder Center 资料，得 12 个月 AWS Skill Builder Premium（标价 $449）；攒徽章可换 $10 / $20 AWS 额度和基础级认证考试券（$100）</li><li><strong>阿里云高校计划</strong>：学生认证后 1 个月免费 2核2G ECS；1 个月内完成指定实验 + 考取 ECS Clouder 认证，可 0 元续领 6 个月，累计最长 7 个月；免费机不支持备案</li><li><strong>腾讯云云+校园</strong>：学生价三选一（轻量 2核2G4M 3 个月等，每款限购 1 台，价格以官网实时为准）；另有云开发个人版最长免费体验 6 个月、AI 产品每月免费调用额度、免费课程</li><li><strong>华为云学生机</strong>：待确认——未核到官方活动页，第三方攻略称 ¥19.9 / 月起，先不展开</li><li><strong>不适用</strong>：Google AI Pro 学生版 12 个月免费仅限美国学生，中国大陆不符合，不用再查</li></ul>
+<p><strong>无新增的类别</strong>：服务器 / GPU、VPN 过去 24 小时无新免费层或试用，存量（Kaggle 每周 30 小时 GPU、Oracle 永久免费、Proton VPN 免费版等）无变化。</p>
+<p>Ant Ling Ling-3.2-flash 的两周免费预估期已过、未见延期公告，按已结束处理。</p>
+<p>以上均来自所列官方出处，已过滤无法验证的福利。</p></article></section>
+<footer>最后更新：2026-11-21 15:09</footer>
+</div>
+</body>
+</html>
