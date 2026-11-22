@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-11-22 · 每日汇总</title>
+<style>
+:root{color-scheme:light dark}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;background:#f6f7f9;color:#1c1e21}
+@media (prefers-color-scheme:dark){body{background:#14161a;color:#e8eaed}}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+header.site{padding:20px 0 8px}
+header.site h1{font-size:24px;margin:0}
+header.site .sub{opacity:.65;font-size:13px;margin-top:4px}
+nav.top{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid rgba(128,128,128,.3);margin-bottom:16px}
+nav.top a{color:inherit;text-decoration:none;font-weight:600}
+section.card{background:rgba(255,255,255,.7);border:1px solid rgba(128,128,128,.25);border-radius:12px;padding:16px 18px;margin:16px 0}
+@media (prefers-color-scheme:dark){section.card{background:rgba(255,255,255,.05)}}
+section.card h2{margin-top:0;font-size:20px}
+article h1{font-size:20px}article h2{font-size:18px}article h3{font-size:16px;margin:18px 0 6px}
+article p{margin:8px 0}
+article ul,article ol{padding-left:22px;margin:8px 0}
+article li{margin:5px 0}
+a{color:#2563eb;word-break:break-all}
+@media (prefers-color-scheme:dark){a{color:#7aa7ff}}
+ul.archive{list-style:none;padding:0}
+ul.archive li{padding:10px 0;border-bottom:1px solid rgba(128,128,128,.2)}
+footer{opacity:.55;font-size:12px;padding:24px 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1>每日汇总</h1><div class="sub">AI 热点 · 免费福利，每天早上更新</div></header>
+<nav class="top"><a href="index.html">今日</a><a href="archive.html">归档</a></nav>
+<h2>2026-11-22</h2>
+<section class="card"><h2>AI 热点</h2><article><h3>AI 热点 · 11月22日</h3>
+<h3>新模型</h3>
+<h3>1. Baseten 发布 bison-1 与 groundhog-1 决策模型，11月20日</h3>
+<p>基于 Google Gemma 4 的开源权重决策模型：bison-1 为 31B 密集模型，在 Artificial Analysis Decision Index v2.1 上得 76 分，在 19 个决策模型中排第一；groundhog-1 为 26B MoE（每 token 约激活 4B）。两者上下文从上代的 16k 提到 128k，支持图文输入，API 定价 $0.10 / $0.035 每百万 token，权重已上 Hugging Face。做分类、路由、风控、内容审核这类&quot;做决定&quot;的任务时，可以直接用小模型输出校准概率，成本比调大模型低得多。 <a href="https://www.baseten.co/blog/meet-bison-1-and-groundhog-1/" rel="noopener">Baseten 官方博客</a></p>
+<h3>新应用与新功能</h3>
+<h3>2. Linger 开源个人 Agent：12GB 显卡跑 125B 模型，11月19日</h3>
+<p>前 DeepSeek V1 作者、DeepSeek-VL 负责人 Tony Zhang 的创业项目 Simplex AI 开源了本地个人 Agent Linger：跑在自己电脑上，可操作已登录的网页、邮箱、日历，每晚把邮件、日历、会议整理成个人 Wiki 供 Agent 查询；核心是 MoE 推理引擎 PolyStrata，把常用专家放显存、其余放内存或 SSD，官方称 125B 的 Qwen3.8-Flash-Next 能在 12GB 的 RTX 3060 上以 45.5 tokens/秒运行，记忆系统在 LoCoMo 上称达 95%。仓库已获 3,381 stars。但要注意：速度数字是项目方实验室数据，README 自己说明多数是在模拟硬件档位上测的，真机可能更慢。 <a href="https://github.com/simplexai-labs/linger" rel="noopener">GitHub</a> / <a href="https://www.qbitai.com/2026/11/511570.html" rel="noopener">量子位</a></p>
+<h3>3. GPT-6.2 Astra 具身实测：16 项机器人任务成功率翻倍，11月21日</h3>
+<p>机器人基础设施公司 XDOF 的 Ember-0 实测：双臂机器人在 16 项真实操作任务上的综合成功率，GPT-6.2 Astra 为 41.2%，两个月前 GPT-6 Astra 只有 19.6%；&quot;给绳子打结&quot;&quot;展开 T 恤&quot;首次被模型攻克，用夹子夹面包从 10% 提到 90%；平均预测延迟从 15 秒降到 10.1 秒。OpenAI Developers 官方账号转发了该结果。说明新一代 VLM 不用针对机器人微调，直接做策略也能在真实物理操作上快速进步；但 41.2% 的绝对值和约 10 秒延迟离实用还有距离。 <a href="https://www.qbitai.com/2026/11/511779.html" rel="noopener">量子位</a></p>
+<h3>开放与套餐变化</h3>
+<h3>4. ChatGPT Space 向 Plus 用户开放，11月20日</h3>
+<p>从 9 月 29 日仅 Pro / Business / Enterprise 可用，扩大到全球 18 岁以上 Plus 用户（$20/月）；Space 取代侧边栏的 Library，成为页面、幻灯片、图片和上传文件的新家，可多人协作编辑，页面能随已连接的应用自动更新；同时上线手机端页面编辑。免费用户打不开共享页面，也没有公开链接；常驻智能体 Dot 暂未开放给 Plus（11月19日起仅小范围测试）。Plus 用户现在也能用 ChatGPT 做可协作、可自动更新的共享文档和幻灯片，不用再导出到别处。 <a href="https://cryptobriefing.com/chatgpt-space-plus-users-mobile-editing/" rel="noopener">OpenAI 11月20日更新日志，经媒体引述</a></p>
+<h3>5. Claude computer use 进入 Team 与 Enterprise 测试版，11月20日</h3>
+<p>从个人 Pro / Max / Ultra 扩大到 Team 与 Enterprise 组织：Claude 能看屏幕、在用户授权的桌面应用里操作，可通过 Claude Desktop（macOS 14+ / Windows），网页版与移动端在开启 Computer access 后也可调用。默认关闭，只有组织 Owner 才能开启，并逐步向各组织推出；企业可按角色限制、设应用白名单/黑名单，部分合规配置（如 HIPAA）不能启用。Claude 的桌面操作能力第一次进到受管的企业环境，管理员可控，意味着它能开始接手公司电脑上的跨应用杂活。 <a href="https://www.gradually.ai/en/changelogs/claude/" rel="noopener">Anthropic 11月20日更新日志</a></p>
+<h3>6. GPT-Live-1.1 上线 API，空闲待机计费降六成，11月19日</h3>
+<p>OpenAI 在 11 月 19 日的 API 更新日志中上线全双工语音模型 gpt-live-1.1（走 v1/live/sessions 端点），多语言发音、口音一致性和转写有改进；同时新增待机模式：WebRTC 会话空闲时暂停推理、保持连接，待机按 $0.02/分钟计费，比通话中的 $0.05/分钟低 60%，GPT-Live-1 同样适用。做电话客服、语音助手这类长时间在线但常静默的场景，空闲成本直接打六折。 <a href="https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/" rel="noopener">MarkTechPost</a></p>
+<h3>论文与开源工具</h3>
+<h3>7. OpenAI 发布 MedChemBench 药物化学基准，11月20日</h3>
+<p>99 道多模态药物化学推理题，取自 117 篇论文/专利、覆盖 761 个分子结构，考分子结构重建、实验依据推理、化合物排序和数值预测。xhigh 推理档下 GPT-6.2 Astra 得 84.5%，GPT-6 Astra 83.3%，GPT-5.6 Sol 58.2%；但结构重建 95.4% 的同时，选化合物和预测性质只有约一半分数。OpenAI 自己说明：这测的是基于已发表研究的推理，不能证明模型能发现新药，训练污染也无法排除。给&quot;AI 能不能帮做药&quot;提供了一个可复现的标尺，也标出了短板——认结构已经很强，做决策还差得远。 <a href="https://openai.com/index/introducing-medchembench/" rel="noopener">OpenAI</a></p>
+<h3>8. Hugging Face 发布 harness adapters，11月20日</h3>
+<p>针对 Pi、OpenCode、Hermes Agent 三个编码智能体框架，分别用强化学习训了一个小 LoRA 适配器，接在 Qwen3.8-27B 上：Pi 下最难的 51 道 SWE-bench Pro 题从 39.2% 提到 64.7%，Terminal-Bench 2.1 从 39% 提到 55% 且每题平均 token 从 2.9K 降到 1.5K；三个适配器还能合并成一个 super-adapter 跨框架用，适配器、数据与训练流程全部开源。不用换大模型，给常用框架配一个专用小适配器就能让本地编码智能体又准又省；不过这些是 HF 自己的测量，换到别的任务上效果未必一样。 <a href="https://huggingface.co/blog/harness-hub/harness-adapters" rel="noopener">Hugging Face 博客</a></p>
+<p>以上均来自所列出处，营销通稿和纠纷类信息已过滤。</p></article></section>
+<footer>最后更新：2026-11-22 01:19</footer>
+</div>
+</body>
+</html>
