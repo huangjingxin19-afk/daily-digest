@@ -33,34 +33,33 @@ footer{opacity:.55;font-size:12px;padding:24px 0;text-align:center}
 <div class="wrap">
 <header class="site"><h1>每日汇总</h1><div class="sub">AI 热点 · 免费福利，每天早上更新</div></header>
 <nav class="top"><a href="index.html">今日</a><a href="archive.html">归档</a></nav>
-<h2>2026-11-23</h2>
-<section class="card"><h2>AI 热点</h2><article><h3>AI 热点 · 11月23日</h3>
+<h2>2026-11-24</h2>
+<section class="card"><h2>AI 热点</h2><article><h3>AI 热点 · 11月24日</h3>
 <h3>新模型</h3>
-<h3>1. 中国电信发布星辰 Xing4.1-Preview，11月23日</h3>
-<p>285B 总参数、每 token 激活 17B 的 MoE 模型（MLA + DSA 架构），原生 100 万 token 上下文，面向智能体编码与长程智能体任务；Apache 2.0 协议开放权重，API 已上天翼 AI 开放平台。电信官方明确表示完整跑分随技术报告在正式版时公布，目前不引用任何分数——这是 285B 旗舰首次以可下载权重形式放出，此前 11 月 18 日的技术报告只开源了 29B 的小模型。 <a href="https://huggingface.co/XingChen-AGI" rel="noopener">中国电信 XingChen-AGI（Hugging Face 官方机构页）</a></p>
-<h3>2. Sarvam 发布 105B 新检查点 Sarvam-105B-1711，11月22日</h3>
-<p>印度 Sarvam AI 的 105B MoE 新检查点（每 token 激活 10.3B），针对工具调用、指令遵循与印度语言做了后训练，Apache 2.0 协议，BF16 权重外加一个 65GB 的 NVFP4 版，可装进单张工作站显卡。官方自测：指令遵循 IFBench 从 32.5 涨到 82.5，8 项对话智能体基准平均 73.9；综合价 $0.15/百万 token，比前代 $0.44 降约 66%，约为原来的三分之一。分数均为厂商自测，部署前建议用自己的任务验证。 <a href="https://www.sarvam.ai/blogs/sarvam-105b-1711" rel="noopener">Sarvam 官方博客</a></p>
-<h3>3. 蚂蚁发布医疗 MoE 模型 LingSante-3.1-flash，11月22日</h3>
-<p>基于 Ling-3.1-Flash 的医疗推理模型，总参数 560B、每 token 激活约 25B，上下文 100 万 token，MIT 许可开源权重。官方称其在复杂医疗推理上达开源最佳，HealthBench Professional 得 65.35，医疗专业行为综合排名第二，仅次于 GPT-6 Astra；做医疗问答、病历整理、就诊准备类应用时可直接拿来试用，但医疗场景仍需专业审核，不能直接当诊断依据。 <a href="https://ant-ling.medium.com/lingsante-3-1-flash-bridging-medical-reasoning-and-real-world-workflows-fdc95f262f64" rel="noopener">蚂蚁百灵团队博客</a></p>
+<h3>1. 智谱发布 GLM-5.4：首个 Loop Transformer 旗舰，28 层循环两遍，11月23日</h3>
+<p>750B 规模的 GLM-5 基座上，28 层共享权重循环执行两遍，不增加参数换取更深推理；新增视觉能力，支持 100 万 token 上下文，可用代码做视频、工程 CAD、游戏与交互式 3D。Coding Plan 全量订阅用户即刻可用（ZCode 中为默认模型，Z.ai Chat 免费与付费用户均可），周额度高于 GLM-5.3，Coding Plan 文档显示积分系数约降三分之一。要注意：官方博客没有给出 750B 模型本身的跑分，只有 30B 同规模消融实验（平均分 70.3→73.2，GPQA-Diamond +4.0、SWE-bench Verified +4.1，但 SimpleQA 与 BrowseComp 略降），“可比 2T–3T 参数模型”只是官方说法；API 与开源权重都还在等安全评估，暂无日期。 <a href="https://z.ai/blog/glm-5.4" rel="noopener">Z.ai 官方博客</a> / <a href="https://juejin.cn/post/7711176736180830223" rel="noopener">掘金（引述 Coding Plan 文档）</a></p>
+<h3>2. 蚂蚁发布 Ling-3.2-air：124B 原生多模态 MoE，MIT 协议开源，11月23日</h3>
+<p>总参数 124B、每 token 激活 5.5B，沿用 Ling-3.0-flash-VL 的原生多模态架构，256K 上下文，权重已上 Hugging Face，SGLang 首日即支持；Artificial Analysis 智能指数 23 分。做工作流自动化、专业文档推理这类任务时可以直接拿来部署，MIT 协议也允许商用。 <a href="https://huggingface.co/inclusionAI/Ling-3.2-air" rel="noopener">Hugging Face 官方模型页</a></p>
+<h3>3. X Square Robot 发布具身基础模型 WALL-OSS-1.0，11月23日</h3>
+<p>原生视觉-语言-动作（VLA）预训练模型，以 Qwen3.5 为基座，把语言、视觉与机器人动作数据联合训练；312 项由评测者自由选择的开放式真机任务中，零样本成功率 55.1%。另有 4B 的 Lite 版与 2B 的 Nano 版面向轻量部署，XR Harness 开发者预览与 WALL-API-1.0 同步推出；但代码与权重尚未放出，官方称即将开源。 <a href="https://x2robot.com/blogs/wall-oss-1-en/" rel="noopener">X Square Robot 官方博客</a></p>
 <h3>新应用与新功能</h3>
-<h3>4. 特斯拉开始推送 FSD v15，11月22日</h3>
-<p>首批向美国 Early Access 用户推送，端到端驾驶网络全面升级，新增 Tesla Reality View——由 AI 实时生成的驾驶可视化界面，车主能在屏幕上看到并干预 FSD 的行驶计划。特斯拉官方宣称安全关键场景处理能力提升 25 倍，但未公开测试条件与统计方法，实际表现待第三方验证；仅限 HW4/AI4 硬件车型，12 月向更广泛用户推送，中国市场仍在按法规做准备。 <a href="https://paultan.org/2026/11/22/tesla-fsd-v15-rollout/" rel="noopener">Paul Tan（引述特斯拉官方 X 公告）</a></p>
-<h3>开放与套餐变化</h3>
-<p><strong>5. Google Duplex 接入 Gemini App 的 Tasks，代打电话功能向免费用户开放，11月20日</strong></p>
-<p>Google Research 确认：Duplex 的自动电话能力已接入 Gemini App 的 Tasks，Gemini 可代用户致电商家询价、预约、等候接听，通话开场会说明是 Google 自动系统，商家可拒接或要求不再来电。开放范围：Tasks 本人 11 月 17 日起向美国、日本、韩国、加拿大、澳大利亚、印度的免费用户开放（此前仅 Google AI Ultra 订阅的 Spark 测试），由 Gemini 4 Hydrogen 与 Neon 驱动；但电话代打先在美国推出，更深入的 Call for Me 目前仅限 Pixel 10/11 加 Google AI 订阅用户。 <a href="https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/" rel="noopener">Google Research 官方博客</a></p>
+<h3>4. Anthropic 推出 Claude Ship：PR 评审、修复、批准交给三个智能体，11月23日</h3>
+<p>Code Review（已正式可用）审 PR 并核验发现，新增的 PR Steward（测试版）处理失败的 CI 检查、合并冲突与评审意见，Claude Approvals（测试版）按团队写在仓库里的策略文件自动批准常规改动、高风险的交还人工。面向 GitHub 仓库的 Claude Team 与 Enterprise 计划，Claude Code 里用 /ship 命令触发，按 token 计费。 <a href="https://www.reuters.com/business/anthropic-launches-claude-ship-help-developers-ship-code-faster-2026-11-23/" rel="noopener">Reuters</a></p>
+<h3>5. Google 搜索 AI Mode 接入 Wallet：花销与卡片信息进搜索上下文，11月23日</h3>
+<p>Personal Intelligence 今日起可接入 Google Wallet（需手动开启，仅读消费与卡片信息，不能动钱），可据此给省钱建议、信用卡权益用法；Drive 与 Gemini App 的接入在未来几周内跟进，AI Overviews 与 AI Mode 也开始按近期搜索上下文给出更个性化的回答。 <a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" rel="noopener">Google 官方博客</a></p>
 <h3>论文与开源工具</h3>
-<h3>6. 黎曼猜想证明获 Lean 与 Mathlib 社区认证，11月21日（正式补发）</h3>
-<p>11 月 20 日 Anthropic 数学家 Levent Alpöge 称与 Claude 完成了黎曼猜想及广义黎曼猜想的证明（Lean 形式化版本）；11 月 21 日 Lean 与 Mathlib 社区发布联合声明，认证命题表述与证明均正确，多名独立研究者编译通过，多款独立检查器接受了证明。本条是 11 月 21 日「待确认」条目的后续：形式化验证已过关，但仍有两个待说明——尚无人类可读的论文，数学界还在理解证明思路；Clay 数学研究所的百万美元奖金尚未裁定。 <a href="https://explainx.ai/blog/levent-alpoge-anthropic-riemann-hypothesis-claude-lean-proof-claimed-vs-verified-2026" rel="noopener">核查追踪 ExplainX</a></p>
+<p><strong>6. DeepMind 用 Gemini 4 智能体小队优化量子线路，每项改进都经 Lean 证明，11月23日</strong></p>
+<p>多个 Gemini 4 智能体小组各自寻找更省资源的量子线路，成果先经 Lean 形式化验证才进入共享笔记：惯性约束聚变模拟成本降 11.8 倍，所需纠错量子比特从 5,650 降到 4,338；arcsin 例程快 290 倍，光敏分子模拟便宜 8 倍，细胞色素 P450 相关计算改善 2.5 倍。Lean 量子算法库、问题规范与已验证解法已在 GitHub 开源，论文见 arXiv:2611.09822。 <a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/" rel="noopener">Google DeepMind 官方博客</a></p>
 <p>以上均来自所列出处，营销通稿和纠纷类信息已过滤。</p></article></section>
-<section class="card"><h2>每日免费福利</h2><article><h3>每日免费福利 · 11月23日</h3>
+<section class="card"><h2>每日免费福利</h2><article><h3>每日免费福利 · 11月24日</h3>
 <h3>今日新增（AI 额度）</h3>
-<h3>1. LG K-EXAONE 2.5 免费 API（补报）</h3>
-<ul><li>平台：LG AI Research EXAONE API 平台（docs.exaone.ai），网站 API，OpenAI 协议兼容</li><li>模型：K-EXAONE 2.5，750B 参数 MoE（激活 31B），524K 上下文，纯文本，主打智能体任务、编程与工具调用；官方基准 SWE-Bench Pro 59.21（厂商自测数据，未经独立验证）</li><li>福利：目前免费使用，无固定额度上限说明，按 API 速率限制计费为 $0</li><li>持续多久 / 到期时间：官方未注明到期，平台 changelog 称“目前免费”，后续若开始收费会另行公布</li><li>限制：仅韩语/英语，中文能力未经验证；API Key 有效期 30 天，到期需重新签发；服务条款要求年满 19 岁、仅限非商业用途；速率上限未公开</li><li>怎么领：登录 docs.exaone.ai 注册并签发 API Key，base_url 为 https://api.exaone.ai/v1，模型名 k-exaone_v2.5</li><li>来源：<a href="https://www.lg.co.kr/media/release/30760" rel="noopener">LG 官方新闻稿</a>（2026-11-09）、EXAONE 官方文档 docs.exaone.ai，核查 2026-11-23</li></ul>
+<h3>1. OpenCode 客户端内免费模型池（补报）</h3>
+<ul><li>平台：OpenCode（开源 AI 编程助手，终端 / 桌面 / IDE 客户端），官网 opencode.ai；免费模型直接在客户端内选，无需注册账号、无需绑卡</li><li>内容：官方文档列出的免费模型共 10 个，全部 $0/M tokens。重点两个：DeepSeek V4.1 Flash Free（200K 上下文、32K 输出，编程能力强的旗舰级小模型，Artificial Analysis 指数 39.5）；Hy4 flash Free（腾讯混元，1M 上下文、65K 输出，主打速度与超长上下文）。其余还有 Nemotron 3.5 Super VL Free、Nemotron 3.5 Lightning Free、MiMo-V2.6-Flash Free、Beam Free、Flint 40B Free、Tidepool Alpha Free、Iceman Free、Jev 1.13 Free</li><li>福利内容：上述模型在 OpenCode 内免费调用，不按 token 计费；每日请求上限未公开，所有免费模型共享一个未公开的日限额</li><li>持续多久 / 到期时间：官方未注明到期，均为“限时免费”，随时可能下架或转付费；Hy4 flash 的免费期较短，OpenCode 官方 X 11 月 18 日称再免费 10 天（约 11 月 28 日前后），官方文档未确认该日期</li><li>限制与条件：仅限 OpenCode 客户端内使用，不能作为通用 API 调用（直接调 OpenCode 推理接口会返回 403 FreeTierError）；DeepSeek V4.1 Flash Free 与 Hy4 flash Free 为零保留、不用于训练，其余模型数据条款各异（部分可能用输入改进模型，Beam 保留 30 天）；免费模型列表每隔一两周轮换</li><li>怎么领：从官网 opencode.ai 下载安装 OpenCode，打开后输入 <code>/models</code>，选择带 Free 后缀的模型即可，无需 API Key</li><li>来源：<a href="https://opencode.ai/v2/docs/console/models/" rel="noopener">OpenCode 官方文档</a>，核查 2026-11-24</li></ul>
 <h3>快到期提醒</h3>
-<ul><li><strong>Vercel AI Gateway Parallel Decisions Fast 免费模型</strong>：<strong>今天 11 月 23 日截止，最后 1 天</strong>，模型名 parallel/parallel-decisions-fast，联网查公司/产品/政策类问题并返回带引用的概率判断。来源：<a href="https://vercel.com/changelog/parallel-decisions-now-available-on-ai-gateway-for-free" rel="noopener">Vercel 更新日志</a></li><li><strong>StepFun StepAudio 3 免费体验</strong>：<strong>今天 11 月 23 日 11:59:59 截止，最后 1 天</strong>，之后按新价格收费。来源：StepFun 开放平台定价文档</li><li><strong>IteraCompute 免费 Auto（30M tokens / 月）</strong>：<strong>明天 11 月 24 日 16:00（北京时间）截止，还剩 1 天</strong>；之后免费 Auto 只保留给 11 月 24 日前充值过的用户和套餐订阅用户，新用户不再有免费档。来源：<a href="https://iteracompute.com/free" rel="noopener">IteraCompute</a></li></ul>
+<ul><li><strong>IteraCompute 免费 Auto（30M tokens / 月）</strong>：<strong>今天 11 月 24 日 16:00（北京时间）截止，最后 1 天</strong>；之后免费 Auto 只保留给 11 月 24 日前充值过的用户和套餐订阅用户，新用户不再有免费档。来源：<a href="https://iteracompute.com/free" rel="noopener">IteraCompute</a></li><li><strong>Epic《深渊之印》（Mark of the Deep）</strong>：<strong>11 月 27 日 0:00（北京时间）截止，还剩约 2 天</strong>，原价 $19.99，领取后永久保留；PC 与 Android 均可领。来源：Epic 官方商城活动数据</li></ul>
 <p><strong>无新增的类别</strong>：服务器 / GPU、VPN、限时免费抢、专业学生福利过去 24 小时无新免费层、试用或变化，存量福利无变化。</p>
 <p>以上均来自所列官方出处，已过滤无法验证和低于价值门槛的福利。</p></article></section>
-<footer>最后更新：2026-11-23 01:19</footer>
+<footer>最后更新：2026-11-24 01:19</footer>
 </div>
 </body>
 </html>
