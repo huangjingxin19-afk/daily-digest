@@ -33,37 +33,43 @@ footer{opacity:.55;font-size:12px;padding:24px 0;text-align:center}
 <div class="wrap">
 <header class="site"><h1>每日汇总</h1><div class="sub">AI 热点 · 免费福利，每天早上更新</div></header>
 <nav class="top"><a href="index.html">今日</a><a href="archive.html">归档</a></nav>
-<h2>2026-11-25</h2>
-<section class="card"><h2>AI 热点</h2><article><h3>AI 热点 · 11月25日</h3>
+<h2>2026-11-26</h2>
+<section class="card"><h2>AI 热点</h2><article><h3>AI 热点 · 11月26日</h3>
 <h3>新模型</h3>
-<p><strong>1. 百度开源 ERNIE 5.5 Flash Preview 权重：280B 参数、每 token 只激活 14B，11月24日</strong></p>
-<p>权重已上 Hugging Face 与 ModelScope，Apache 2.0 协议，分三个版本（FP8+MXFP4 专家、纯 FP8、BF16），上下文 100 万 token，支持 vLLM/SGLang；但这只是中间检查点，百度明确说后训练还没做完、部分能力可能不完整，跑分也都是官方自报。想本地部署大参数稀疏 MoE、又不想被托管 API 绑住的可以直接拿来试。 <a href="https://news.aibase.com/news/32502" rel="noopener">AIbase 新闻</a></p>
-<h3>2. 蚂蚁开源医疗模型家族 LingSante：560B 推理模型 + 可跑笔记本的多模态模型，11月23日</h3>
-<p>两款主力权重已上 Hugging Face（MIT 协议）：LingSante-3.1-flash 总参数 560B、每 token 激活约 25B，100 万上下文，主打复杂医学推理与证据验证；LingSante-3.1-air-VL 124B/5.5B 原生多模态，能读影像、皮肤照片与体检报告。同系列还有预测未来六年 150 多种疾病风险的 LingSante-Pulse 等专用模型。医疗 AI 第一次有这种量级的开源权重可供复现与二次开发，但官方也明确这只是研究工具，不能替代临床诊断。 <a href="https://technode.global/2026/11/24/ant-group-open-weight-lingsante-medical-ai-models/" rel="noopener">TechNode</a></p>
-<p><strong>3. KRAFTON 发布 Raon-1-mini 正式版：28.8B MoE，韩语与智能体任务见长，11月24日</strong></p>
-<p>总参数 28.8B、每 token 激活 4.3B，Apache 2.0 协议，已上 Hugging Face，支持 Transformers/vLLM/llama.cpp/MLX；官方自报 AIME 2026 96.7、GPQA Diamond 86.0，NVFP4 量化版单张 RTX 5090（32GB）可跑。30B 级开源模型里又多了一个韩语强、部署门槛低的选择，但跑分均为官方自报，尚无独立验证。 <a href="https://huggingface.co/KRAFTON/Raon-1-mini" rel="noopener">Hugging Face 官方模型页</a></p>
+<p><strong>1. Cognition 发布 SWE-2.1：纯强化学习训出的编程模型，Terminal-Bench 分数翻倍，11月24日</strong></p>
+<p>在 Kimi K3 基础上继续纯 RL 训练，Terminal-Bench 4.1 自报从 24.2 升至 50.0，FrontierCode 2.0 从 24.1 升至 41.3；另有 Cerebras 加速的 Lightning 版（自报 600 token/秒）和放宽限制的 Cyber 安全版。只在 Devin Desktop/Cloud/CLI 内可用，无 API、无权重；全部跑分均为官方自报，尚无独立验证。 <a href="https://www.unite.ai/cognition-releases-swe-2-1-with-major-coding-and-cybersecurity-gains/" rel="noopener">Unite.AI（转述 Cognition 官方发布）</a></p>
+<p><strong>2. JetBrains 开源 Mellum2.1 Instruct：12B MoE 编程模型，专做快问快答，11月25日</strong></p>
+<p>与 10 月的 Thinking 版同架构（12B 总参数、每 token 激活 2.5B），但跳过思维链直接给答案；SWE-bench Verified 自报 40.4%，是上一代 Instruct（20.2%）的两倍；智能体任务平均用 token 从 10,100 降到 5,600，少约 45%。Apache 2.0 协议，Hugging Face 上有 GGUF 版可本地跑，适合当子智能体做小修小补、省 token；难题能力明显弱于 Thinking 版。 <a href="https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/" rel="noopener">JetBrains 官方博客</a></p>
+<h3>3. Midjourney 上线动漫模型 Niji V8：专用编辑模型接回角色一致性，11月24日</h3>
+<p>与 Spellbrush 合作的动漫分支，新增专用编辑模型：上传角色图加文字指令，就能把同一角色放进新场景、新姿势，补上 Niji 7 取消角色参考（cref）后的缺口；提示词依从性与画面连贯性也有提升。已向付费订阅用户开放，Discord 加 --niji 8 或网页端切换；官方未公布任何跑分与速度数据。 <a href="https://ascii.jp/en/elem/000/004/454/4454596/" rel="noopener">ASCII.jp</a></p>
+<h3>4. 商汤开源 SenseNova U1.6：8B 统一视觉模型会自己检查并修正图片文字，11月24日</h3>
+<p>同一权重兼顾理解、生成与编辑，新增原生自纠：生成信息图后对照提示词自查文字错误再重画一版；官方自报 UltraTextBench 密集信息图测试从 86.04 升至 92.28（相对提升约 7%）。Apache 2.0 协议，权重已上 Hugging Face，另有 4 步/8 步蒸馏 LoRA 与 GGUF 版；自纠训练主要针对信息图，其他题材效果待验证。 <a href="https://huggingface.co/sensenova/SenseNova-U1.6-8B-MoT" rel="noopener">Hugging Face 官方模型页</a></p>
+<p><strong>5. 蚂蚁 inclusionAI 开源 Ling-3.2-air：124B 多模态 MoE，每 token 只激活 5.5B，11月23日</strong></p>
+<p>原生多模态混合线性 MoE，MIT 协议，权重已上 Hugging Face；官方自报工作流自动化评测 AutomationBench-AA 从 15.7% 升至 61%，并提供首日 SGLang/vLLM 部署支持。124B 参数、每 token 只激活 5.5B，4 张 141GB 显卡可跑 256K 上下文，适合自建部署做文档与流程自动化；跑分均为官方自报。 <a href="https://huggingface.co/inclusionAI/Ling-3.2-air" rel="noopener">Hugging Face 官方模型页</a></p>
+<h3>新应用与新功能</h3>
+<p><strong>6. Claude 的 artifact 可以装成桌面 App 了：Mac/Windows 独立窗口运行，11月24日</strong></p>
+<p>Anthropic 推出“Install as app”测试版，所有套餐（含免费版）可用：把 Claude 生成的计时器、看板、小工具等 artifact 一键装成独立 App，有自己的图标和窗口，改 artifact 后 App 自动同步。分三档权限，最高档“完全访问本机”可运行程序、读写删除文件，且 Anthropic 事先不审核这些 App；需 Claude 桌面端 6.28899.0 及以上，仍需联网登录。 <a href="https://www.macrumors.com/2026/11/25/claude-install-artifacts-desktop-apps/" rel="noopener">MacRumors（转述 Anthropic 公告）</a></p>
 <h3>开放与套餐变化</h3>
-<p><strong>4. GPT-6.2 Sol 进入 ChatGPT 日常对话标签，GPT-5.6 定于 12 月 23 日退役，11月23日</strong></p>
-<p>OpenAI 把对话调优版 GPT-6.2 Sol 推送到 ChatGPT 的 Chat 标签，Plus、Pro、Business、Enterprise 全球可用，免费与 Go 用户仍用 GPT-6 Luna；同时宣布 GPT-5.6 Sol 与 Terra 将于 12 月 23 日从 Chat、Work 与 Codex 下线。付费用户日常对话直接用上最新一代，之前手动选 GPT-5.6 的有一个月过渡期。 <a href="https://www.digitaltrends.com/computing/chatgpt-is-getting-a-chat-tuned-gpt-6-2-sol-and-it-can-offer-to-watch-for-a-price-drop/" rel="noopener">Digital Trends</a></p>
-<p><strong>5. Antigravity：Gemini 4 Carbon 下放给付费 AI Pro，Hydrogen 向所有用户开放，11月23日</strong></p>
-<p>Google 宣布 Antigravity 里最强的 Gemini 4 Carbon 不再是 AI Ultra（$99.99/月）专属，付费 AI Pro（$19.99/月）用户也能用；轻快的 Hydrogen 则开放给包括免费档在内的所有用户；全员配额重置，Pro 原先独立的 Argon 配额并入通用额度。代价是 Gemini 4 Argon 与 3.8 Flash 将于 11 月 30 日从 Antigravity 下线。注意这只是 Antigravity 内的变化，Gemini App 里 Carbon 仍属 Ultra。 <a href="https://9to5google.com/2026/11/23/antigravity-gemini-4-carbon/" rel="noopener">9to5Google</a></p>
+<p><strong>7. MCP 两周年：Tasks 与 Elicitation 转正式，Skills over MCP 进公开测试，11月24日</strong></p>
+<p>Anthropic 在 MCP 发布两周年之际升级协议：后台长任务（Tasks）与中途向用户追问（Elicitation）正式可用，服务器可附带分步操作手册的 Skills over MCP 进入公开测试，文件上传即将推出；Pro/Max/Ultra 用户默认可用，Team 需管理员开启，企业版随后。官方称 MCP SDK 月下载量已超 7 亿次（7 月时为 4 亿次）。 <a href="https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/" rel="noopener">The Decoder（转述 Anthropic 公告）</a></p>
 <h3>论文与开源工具</h3>
-<h3>6. OpenAI 预印本：GPT-6 不靠专用生物模型也能设计蛋白质，湿实验验证了结合，11月24日</h3>
-<p>GPT-6.2 仅凭推理与代码设计迷你结合蛋白，在与 Onava 合作的湿实验里，322 个候选中有 35 个（10.9%）结合了 PD-L1、IL-7Rα、TrkA、VEGF-A、IL-17A 五个靶点中的目标；抗体改造也有约七成保留结合。通用模型有望靠改提示词就切换蛋白设计任务，而不必为每个任务重训专用模型；但预印本未经同行评审，候选筛选仍靠 Boltz-2 等专用模型，且完整结构预测远弱于专用模型（TM-score 0.38 对 0.93）。 <a href="https://aiweekly.co/alerts/openais-gpt-62-hits-109-wet-lab-rate-on-new-minibinders" rel="noopener">AI Weekly（转述 OpenAI 研究文章）</a></p>
-<h3>7. DeepMind 开源 gBench：一个工具同时测开源模型的跑分、延迟与智能体质量，11月23日</h3>
-<p>Apache 2.0 协议，GitHub 已公开：86 套学术评测、16 项确定性 Golden Set 检查、GemmaClaw 智能体多轮工具调用评测三档，外加压测模式，可接 vLLM 或 Ollama 等 OpenAI 兼容接口。跑开源模型选型、压测部署配置时不用再拼多个零散工具。 <a href="https://github.com/google-deepmind/gbench" rel="noopener">GitHub 官方仓库</a></p>
+<p><strong>8. PrismML 开源 Ternary Bonsai 2.5 27B：27B 模型三值量化后只占 5.9GB，11月24日</strong></p>
+<p>基于 Qwen3.8-27B，权重全部压成 -1/0/+1（三值量化），体积从 53.8GB 压到 5.93GB，262K 上下文保留；官方自报智能体评测均分从 37.9 升至 54.2（提升约 43%），达到全精度父模型的九成。Apache 2.0 协议，Hugging Face 上有 GGUF 与 Apple Silicon 的 MLX 版，单机本地跑 27B 级编程智能体门槛再降一级；跑分均为官方自报。 <a href="https://www.koda.community/editorial/2026-11-25-43-better-coding-agent-same-5-93-gb-file.html" rel="noopener">Koda</a></p>
 <h3>待核区</h3>
-<ul><li>网传一份约 940 页的广义黎曼猜想手稿：数学家 John Baez 的拆解指出第 13 章缺失、约 444 页被指存在硬伤，尚无可直接核对的完整证明与独立验证，暂不作正式条目。</li></ul>
+<ul><li>OpenAI 11 月 24 日在 GitHub 发布 111 页预印本，称矩阵乘法指数 ω 恰好等于 9/4（2.25）：配套 Lean 形式化只覆盖无除法电路，未覆盖最强结论，且截至 11 月 25 日尚无具名专家复核，暂不作正式条目。</li><li>网传约 940 页广义黎曼猜想手稿：数学家 John Baez 的拆解指出第 13 章缺失、约 444 页被指存在硬伤，尚无可直接核对的完整证明与独立验证，暂不作正式条目。</li></ul>
 <p>以上均来自所列出处，营销通稿和纠纷类信息已过滤。</p></article></section>
-<section class="card"><h2>每日免费福利</h2><article><h3>每日免费福利 · 11月25日</h3>
+<section class="card"><h2>每日免费福利</h2><article><h3>每日免费福利 · 11月26日</h3>
 <h3>今日新增（AI 额度）</h3>
-<h3>1. Qoder 匿名模型 HungerG 限时免费 7 天</h3>
-<ul><li>平台：Qoder（阿里巴巴旗下 AI 编程助手，桌面端 App / Qoder IDE），官网 qoder.com</li><li>内容：匿名编程模型 HungerG（代号，研发方未公开），1M token 上下文，多模态输入，支持思考强度调节；定位编程任务（复杂代码分析、Bug 定位、从零开发、需求澄清与修改迭代）</li><li>福利内容：2026 年 11 月 23 日 24:00 至 11 月 30 日 24:00（北京时间）期间，调用 HungerG 不消耗 Credits，思考强度调到「最大」同样免费；免费账号、Credits 余额为 0 的账号也可参加</li><li>持续多久 / 到期时间：2026 年 11 月 30 日 24:00（北京时间）截止，还剩约 5 天半</li><li>限制与条件：仅限个人账号（体验版/免费、Pro 试用期、Lite、Pro、Pro+、Ultra），团队版与企业版不参加；仅支持 Qoder 与 Qoder IDE，JetBrains 插件、CLI、Cloud Agents、移动端与网页版暂不支持；单个账号每天有较高的合理使用上限（具体数字未公开），达到上限后当天不可再调用，次日恢复；部分功能运行时会调用其他模型，那部分仍按对应模型计费</li><li>注意：模型身份未公开、无公开跑分，官方邀请用户用真实任务自行验证；网上流传的「实为 StepFun Step-5」说法未经证实，不要当真</li><li>怎么领：无需领取，把 Qoder 或 Qoder IDE 更新到最新版，在模型选择器里选 HungerG 即可直接使用</li><li>来源：Qoder 官方文档「匿名模型 HungerG 限时免费使用」活动页（docs.qoder.com）与 Qoder 官方 X 账号 @qoder_ai_ide，核查 2026-11-25；交叉核实：<a href="https://www.ailyre.com/source/?id=qoder-hungerg-stealth-model-free-7-days-2026-11-23&amp;lang=en" rel="noopener">Ailyre 汇总</a></li></ul>
+<h3>1. 七牛云 Conatus Free：每天 1 亿 Token（补录，11 月 30 日截止）</h3>
+<ul><li>平台：七牛云（网站 / API），模型 ID qiniu/conatus-free</li><li>内容：1024 程序员节限时免费模型，匿名融合模型（官方称聚合多个顶级模型的通用能力，具体是哪些模型未公开），1M token 上下文，128K 最大输出，支持工具调用、深度思考、图像理解、结构化输出</li><li>福利内容：完成实名认证后每天免费 1 亿 Token；任意一笔大于 100 元且已到账的充值后，每日上限升至 10 亿 Token（充值非必需，不充值也有每天 1 亿）</li><li>持续多久 / 到期时间：2026 年 10 月 24 日 00:00 至 2026 年 11 月 30 日 23:59（北京时间），还剩约 4 天；活动结束后停止调用，不转付费</li><li>限制与条件：需登录七牛云账号并完成实名认证（未认证 0 额度）；额度每天 00:00 重置、不结转；同一账号下所有 API Key 共享额度；额度用完直接拒绝请求，不扣余额、不自动转付费；受风控限制的账号无法参与</li><li>注意：匿名模型、无公开跑分，底层模型未披露，实际能力需自己试；官方提示活动结束后服务即停，不要把它当长期服务用</li><li>怎么领：打开七牛云 Conatus 免费模型活动页 → 登录并完成实名认证 → 在控制台创建 API Key → 用模型 ID qiniu/conatus-free 调用，接口 https://api.qnaigc.com/v1 兼容 OpenAI 与 Messages 协议</li><li>来源：七牛云官方活动页 https://www.qiniu.com/ai/free-models/conatus-2026 ，核查 2026-11-26</li></ul>
+<h3>今日新增（限时免费抢）</h3>
+<h3>2. Epic《Bread and Fred》免费领（今晚 0 点开领）</h3>
+<ul><li>平台：Epic Games Store（PC）</li><li>内容：双人合作攀爬平台跳跃游戏，两只企鹅爬雪山，原价 $14.99</li><li>福利内容：免费领取，领后永久保留</li><li>持续多久 / 到期时间：北京时间 11 月 27 日 0:00 至 12 月 4 日 0:00（Epic 每周四 16:00 UTC 换档）；现在还没开领，今晚 0 点开始</li><li>限制与条件：需 Epic 账号登录领取</li><li>怎么领：今晚 0 点后打开 Epic 商城免费游戏页领取</li><li>来源：Epic 官方促销数据（epicfree.games、gamewatcher 读取），核查 2026-11-26</li><li>同档还有 Firestone – Idle Clicker Online RPG 游戏内礼包（角斗士皮肤 + 宝箱 / 宝石 / 代币），本体已免费，本次是礼包不是游戏，需在活动期间通过 Epic 登录游戏领取，同一时间窗口</li></ul>
 <h3>快到期提醒</h3>
-<ul><li><strong>Epic《深渊之印》（Mark of the Deep）</strong>：<strong>11 月 27 日 0:00（北京时间）截止，还剩约 1 天半</strong>，原价 $19.99，领取后永久保留；PC 与 Android 均可领。来源：Epic 官方商城活动数据</li></ul>
-<p><strong>无新增的类别</strong>：服务器 / GPU、VPN、限时免费抢、专业学生福利过去 24 小时无新免费层、试用或变化，存量福利无变化。</p>
+<ul><li><strong>Epic《深渊之印》（Mark of the Deep）</strong>：<strong>今晚 11 月 27 日 0:00（北京时间）截止，还剩约 15 小时</strong>，原价 $19.99，领取后永久保留。来源：Epic 官方促销数据</li><li><strong>Epic《异形：隔离》（Alien: Isolation）</strong>：<strong>同样今晚 11 月 27 日 0:00 截止，还剩约 15 小时</strong>，原价 $39.99，领取后永久保留。说明：这款 11 月 19 日起就已免费，但 11 月 21 日时各路消息冲突未报，现经 Epic 促销数据两路核对确认，别错过最后半天。来源：Epic 官方促销数据（epicfree.games、gamewatcher）</li><li><strong>AutoClaw 每周 100M Tokens（M11W4）</strong>：<strong>11 月 29 日 23:59 截止，还剩 3 天</strong>，登录 AutoClaw 即可领取 100M Tokens（=10,000 积分），每个账号限领一次，过期失效。来源：AutoClaw 官方博客，核查 2026-11-26</li></ul>
+<p><strong>无新增的类别</strong>：服务器 / GPU、VPN、专业学生福利过去 24 小时无新免费层、试用或变化，存量福利无变化。</p>
 <p>以上均来自所列官方出处，已过滤无法验证和低于价值门槛的福利。</p></article></section>
-<footer>最后更新：2026-11-25 01:19</footer>
+<footer>最后更新：2026-11-26 01:19</footer>
 </div>
 </body>
 </html>
